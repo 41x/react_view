@@ -76,9 +76,7 @@ class App extends React.Component {
     }
 
     getData(url) {
-        // не получилось вытянуть данные из-за отсутствия поддержки на сервере кросдоменных запросов и jsonp
         // получение данных по api с эмулировано
-        // после устранения проблемы перепишу код
         return new Promise(function (res, rej) {
             if (url == "http://dev.initpro.ru/applicants/Table1.json") {
                 setTimeout(function () {
@@ -91,20 +89,6 @@ class App extends React.Component {
                 }, 1000);
             }
         });
-
-        // return new Promise(function (resolve, reject) {
-        //     $.ajax({
-        //         url:url,
-        //         type: 'GET',
-        //         success:function(jsn){
-        //             alert(jsn);
-        //             resolve(jsn);
-        //         },
-        //         error:function(){
-        //             reject("Error");
-        //         },
-        //     });
-        // });
     }
 
 
